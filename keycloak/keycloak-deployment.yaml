@@ -34,7 +34,7 @@ metadata:
   labels:
     app: keycloak
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: keycloak
@@ -47,10 +47,12 @@ spec:
       - name: keycloak
         image: bitnami/keycloak:latest
         env:
-        - name: KEYCLOAK_USER
-          value: "admin"
-        - name: KEYCLOAK_PASSWORD
-          value: "123qweasd"
+        - name: KEYCLOAK_CREATE_ADMIN_USER
+          value: "true"
+        - name: KEYCLOAK_ADMIN_USER
+          value: "admin" # o el nombre de usuario que prefieras
+        - name: KEYCLOAK_ADMIN_PASSWORD
+          value: "123qwe"
         - name: KEYCLOAK_DATABASE_HOST
           value: "postgresql"
         - name: KEYCLOAK_DATABASE_PORT
