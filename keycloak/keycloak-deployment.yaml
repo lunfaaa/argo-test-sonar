@@ -53,6 +53,8 @@ spec:
           value: "admin" # o el nombre de usuario que prefieras
         - name: KEYCLOAK_ADMIN_PASSWORD
           value: "dxf0rdz5vxy8qbt_NQV"
+        - name: KEYCLOAK_DATABASE_VENDOR
+          value: "postgresql"
         - name: KEYCLOAK_DATABASE_HOST
           value: "postgresql"
         - name: KEYCLOAK_DATABASE_PORT
