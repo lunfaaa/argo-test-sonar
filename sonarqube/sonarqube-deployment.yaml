@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sonarqube
-        image: sonarqube:latest
+        image: lunfaaa/my-sonarqube-with-keycloak:latest
         ports:
         - containerPort: 9000
         volumeMounts:
